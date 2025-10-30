@@ -24,3 +24,17 @@ document.addEventListener("DOMContentLoaded", function () {
     form.reset();
   });
 });
+
+// --- Bootstrap Carousel init ---
+document.addEventListener("DOMContentLoaded", () => {
+  const el = document.getElementById("heroCarousel");
+  if (el && window.bootstrap) {
+    new bootstrap.Carousel(el, {
+      interval: 4000,
+      ride: "carousel",
+      pause: false,
+      wrap: true,
+      touch: true,
+    });
+  }
+});

@@ -1,40 +1,284 @@
 body {
-  background-color: #1e123d;
-  color: #f5f5f5;
-  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #0d0630;
+  color: #f4f4f4;
 }
 
-.section-light {
-  background-color: #e9e9f0;
-  color: #1e123d;
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(13, 6, 48, 0.85);
+  color: #fff;
+  z-index: 10;
+}
+
+.navbar .logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #e3e9ff;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  color: #e3e9ff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #f4a261;
+}
+
+/* Hero Carousel */
+#heroCarousel img {
+  height: 85vh;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  bottom: 20%;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #f4a261;
+}
+
+/* Sections */
+section {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+/* Services */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+}
+
+.service img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
   border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service h3 {
+  margin-top: 15px;
+  color: #f4a261;
+}
+
+/* About */
+.about p {
+  max-width: 700px;
+  margin: 20px auto;
+  line-height: 1.6;
+}
+
+/* Clients */
+.clients {
+  background: #150e45;
+}
+
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.testimonial {
+  background: #1d1555;
   padding: 20px;
+  border-radius: 10px;
+  max-width: 320px;
+  font-style: italic;
+  color: #e3e9ff;
 }
 
-.hero {
-  background: url("img/city.jpg") center/cover no-repeat;
-  height: 50px;
-  width: 20%;
+/* Contact */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: 30px auto 0;
 }
 
-.service-img {
-  width: 300px;
-  height: 250px;
+.contact input,
+.contact select,
+.contact textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
 }
 
-.btn-accent {
-  background-color: #a16ae8;
+.contact button {
+  background: #4a90e2;
   color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
-.footer {
-  background-color: #2d254c;
+.contact button:hover {
+  background: #357ab8;
+}
+
+/* Footer */
+footer {
+  background: #0b0427;
+  text-align: center;
   padding: 20px;
-  color: #ccc;
+  font-size: 0.9rem;
 }
 
-.category-icon {
-  height: 150px;
-  object-fit: contain;
-  margin-bottom: 10px;
+footer a {
+  color: #4a90e2;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #f4a261;
+}
+
+@media (max-width: 768px) {
+  #heroCarousel img {
+    height: 60vh;
+  }
+  .carousel-caption h1 {
+    font-size: 1.4rem;
+  }
+  .carousel-caption p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Overlay degradado oscuro sobre imágenes del carrusel */
+#heroCarousel .carousel-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.6) 60%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  z-index: 1;
+}
+
+/*  Asegura que el texto quede por encima del overlay */
+#heroCarousel .carousel-caption {
+  position: absolute;
+  z-index: 2;
+}
+
+/* Efecto de aparición (fade-in) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Aplica a secciones específicas */
+.service,
+.testimonial {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Retraso progresivo para que aparezcan en orden */
+.service:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.service:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.service:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.service:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.testimonial:nth-child(1) {
+  animation-delay: 0.3s;
+}
+.testimonial:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.testimonial:nth-child(3) {
+  animation-delay: 0.7s;
+}
+
+/* Ajustes para pantallas móviles */
+@media (max-width: 768px) {
+  /* Carrusel */
+  #heroCarousel img {
+    height: 60vh;
+  }
+
+  .carousel-caption h1 {
+    font-size: 1.4rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.9rem;
+  }
+
+  /* Espaciados más cómodos */
+  section {
+    padding: 60px 6%;
+  }
+
+  /* Servicios */
+  .service img {
+    height: 180px;
+  }
+
+  /* Testimonios */
+  .testimonial {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Footer */
+  footer {
+    font-size: 0.85rem;
+    padding: 15px;
+  }
 }
