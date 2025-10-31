@@ -282,3 +282,19 @@ footer a:hover {
     padding: 15px;
   }
 }
+
+.lang-select {
+  background: #1a1442;
+  color: #f4a261;
+  border: 1px solid #f4a261;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.lang-select:hover {
+  background: #f4a261;
+  color: #1a1442;
+}

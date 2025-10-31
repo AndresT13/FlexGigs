@@ -1,0 +1,53 @@
+{
+  "nav_services": "Serviços",
+  "nav_about": "Sobre",
+  "nav_contact": "Contato",
+  "nav_pqrs": "PQRS",
+
+  "hero_title": "Bem-vindo aos seus serviços profissionais",
+  "hero_sub": "Explore, conecte-se e colabore — tudo em um só lugar.",
+  "hero_slide2_title": "Descubra Talentos de Alto Nível",
+  "hero_slide2_sub": "Encontre profissionais qualificados para cada projeto.",
+  "hero_slide3_title": "Faça Seu Negócio Crescer",
+  "hero_slide3_sub": "Aproveite nossa plataforma para expandir seu alcance.",
+
+  "services_title": "Nossos Serviços",
+
+  "srv_programming": "Programação",
+  "srv_programming_desc": "Serviços profissionais de programação para dar vida às suas ideias.",
+  "srv_design": "Design Gráfico",
+  "srv_design_desc": "Soluções criativas de design gráfico para fortalecer a identidade da sua marca.",
+  "srv_digital": "Marketing Digital",
+  "srv_digital_desc": "Estratégias eficazes de marketing digital para expandir sua presença online.",
+  "srv_business": "Negócios",
+  "srv_business_desc": "Serviços empresariais completos para ajudar você a alcançar o sucesso.",
+
+  "about_title": "Sobre Nós",
+  "about_text_one": "A FlexGigs é uma plataforma web global projetada para revolucionar a forma como profissionais e clientes se conectam no ecossistema digital. Surge como uma solução inovadora para a fragmentação do mercado atual, onde a maioria das plataformas se concentra exclusivamente em um tipo de serviço ou nicho específico. A FlexGigs propõe um modelo multicategoria que integra serviços digitais, acadêmicos, técnicos, domésticos e de bem-estar em um ambiente unificado, seguro e transparente para clientes e profissionais.",
+  "about_text_two": "O projeto baseia-se na crença de que a tecnologia deve servir como uma ferramenta de inclusão e equidade no trabalho. Por isso, a plataforma combina usabilidade, acessibilidade e confiança, permitindo que qualquer pessoa — independentemente da localização, nível técnico ou tipo de serviço — participe ativamente da economia digital.",
+  "about_text_three": "Por meio de ferramentas modernas desenvolvidas com HTML5, CSS3 e Bootstrap, a FlexGigs garante uma experiência de navegação intuitiva e adaptável a qualquer dispositivo, com processos simplificados que reduzem as barreiras tecnológicas que historicamente limitaram o acesso a oportunidades online. Mais do que um portal de serviços, a FlexGigs é uma comunidade colaborativa onde reputação, transparência e qualidade são pilares fundamentais.",
+  "about_text_four": "Cada profissional pode criar seu perfil, mostrar sua experiência, receber avaliações e fortalecer sua presença digital, enquanto os clientes encontram soluções confiáveis com respaldo verificável e comunicação direta. A médio prazo, a FlexGigs pretende tornar-se uma referência global em inovação e confiança, integrando recursos avançados como gateways de pagamento seguros, geolocalização, chat em tempo real e programas de fidelidade. Dessa forma, a empresa busca impulsionar a transformação digital do trabalho independente, promovendo economias colaborativas, sustentáveis e conectadas. FlexGigs: conectamos talento com oportunidade, em qualquer lugar do mundo.",
+  "clients_title": "O que dizem nossos clientes",
+  "client_1": "A FlexGigs transformou nossa presença digital. A equipe de programação deles é de altíssimo nível!",
+  "client_2": "Os serviços de design gráfico da FlexGigs superaram nossas expectativas. Altamente recomendados!",
+  "client_3": "Graças às estratégias de marketing digital da FlexGigs, nosso negócio teve um crescimento significativo.",
+  "client_4": "A FlexGigs oferece uma experiência perfeita tanto para clientes quanto para profissionais. Uma verdadeira revolução no setor!",
+  "contact_title": "Entre em Contato",
+  "contact_sub": "Tem dúvidas ou precisa de ajuda? Estamos aqui para ajudar!",
+  "contact_send": "Enviar Mensagem",
+
+  "data-lang-placeholder_contact_name": "Seu Nome",
+  "data-lang-placeholder_contact_email": "Seu E-mail",
+  "data-lang-placeholder_contact_message": "Sua Mensagem",
+
+  "opt_choose": "Escolher...",
+  "opt_programming": "Programação",
+  "opt_design": "Design Gráfico",
+  "opt_marketing": "Marketing Digital",
+  "opt_business": "Negócios",
+
+  "footer_privacy": "Política de Privacidade",
+  "footer_terms": "Termos de Serviço",
+  "footer_cookies": "Política de Cookies",
+  "footer_help": "Ajuda"
+}

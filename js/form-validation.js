@@ -1,7 +1,15 @@
-document.addEventListener("DOMContentLoaded", function () {
+//  FlexGigs - Form Validation (con soporte multi-idioma)
+document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("pqrsForm");
 
-  form.addEventListener("submit", function (event) {
+  //  Verificación de existencia del formulario
+  if (!form) {
+    console.warn("⚠️ No se encontró el formulario PQRS (#pqrsForm).");
+    return;
+  }
+
+  //  Evento de envío
+  form.addEventListener("submit", (event) => {
     event.preventDefault();
 
     const name = document.getElementById("name");
@@ -11,35 +19,64 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let errors = [];
 
-    if (name.value.trim() === "") {
-      errors.push("Name is required.");
-    }
-
-    if (email.value.trim() === "") {
-      errors.push("Email is required.");
+    //  Validaciones básicas
+    if (!name?.value.trim()) errors.push(getLangText("form_error_name"));
+    if (!email?.value.trim()) {
+      errors.push(getLangText("form_error_email_required"));
     } else if (!validateEmail(email.value)) {
-      errors.push("Email format is invalid.");
+      errors.push(getLangText("form_error_email_invalid"));
     }
-
-    if (type.value === "" || type.value === "Choose...") {
-      errors.push("Please select a type of request.");
+    if (!type?.value || type.value === "Choose...") {
+      errors.push(getLangText("form_error_type"));
     }
+    if (!message?.value.trim()) errors.push(getLangText("form_error_message"));
 
-    if (message.value.trim() === "") {
-      errors.push("Message cannot be empty.");
-    }
-
+    //  Mostrar errores o éxito
     if (errors.length > 0) {
       alert(errors.join("\n"));
     } else {
-      alert("Form submitted successfully!");
-      form.reset(); // Limpia el formulario si todo está bien
+      alert(getLangText("form_success"));
+      form.reset();
     }
   });
-
-  function validateEmail(email) {
-    // Expresión regular para validar formato de email básico
-    const re = /\S+@\S+\.\S+/;
-    return re.test(email);
-  }
 });
+
+//  Función auxiliar para validar email
+function validateEmail(email) {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(email);
+}
+
+//  Función para obtener texto en el idioma actual
+function getLangText(key) {
+  const lang = localStorage.getItem("lang") || "en";
+
+  const messages = {
+    en: {
+      form_error_name: "Name is required.",
+      form_error_email_required: "Email is required.",
+      form_error_email_invalid: "Email format is invalid.",
+      form_error_type: "Please select a type of request.",
+      form_error_message: "Message cannot be empty.",
+      form_success: "Form submitted successfully!",
+    },
+    es: {
+      form_error_name: "El nombre es obligatorio.",
+      form_error_email_required: "El correo electrónico es obligatorio.",
+      form_error_email_invalid: "El formato del correo no es válido.",
+      form_error_type: "Selecciona un tipo de solicitud.",
+      form_error_message: "El mensaje no puede estar vacío.",
+      form_success: "¡Formulario enviado correctamente!",
+    },
+    pt: {
+      form_error_name: "O nome é obrigatório.",
+      form_error_email_required: "O e-mail é obrigatório.",
+      form_error_email_invalid: "Formato de e-mail inválido.",
+      form_error_type: "Selecione um tipo de solicitação.",
+      form_error_message: "A mensagem não pode estar vazia.",
+      form_success: "Formulário enviado com sucesso!",
+    },
+  };
+
+  return messages[lang][key] || messages["en"][key] || key;
+}
