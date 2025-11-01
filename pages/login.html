@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlexGigs — Login</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+
+  <body class="bg-gradient">
+    <!-- 🔹 Header con el nombre de la marca -->
+    <header class="login-header">
+      <h1 class="brand-title">FlexGigs</h1>
+    </header>
+
+    <main class="d-flex align-items-center justify-content-center vh-100">
+      <div class="login-card">
+        <h2 class="login-title" data-lang="login_title">Sign In</h2>
+        <p data-lang="login_sub">Access your account to manage your services</p>
+
+        <div class="text-end mb-3">
+          <select
+            id="lang-selector"
+            class="form-select form-select-sm w-auto ms-auto"
+          >
+            <option value="en">EN</option>
+            <option value="es">ES</option>
+            <option value="pt">PT</option>
+          </select>
+        </div>
+
+        <form id="loginForm" novalidate>
+          <div class="mb-3">
+            <input
+              type="email"
+              id="email"
+              class="form-control"
+              data-lang="login_email"
+              placeholder="Enter your email"
+              required
+            />
+            <div class="invalid-feedback" data-lang="login_email_error">
+              Please enter a valid email.
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <input
+              type="password"
+              id="password"
+              class="form-control"
+              data-lang="login_password"
+              placeholder="Enter your password"
+              required
+            />
+            <div class="invalid-feedback" data-lang="login_password_error">
+              Password is required.
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-primary w-100"
+            data-lang="login_button"
+          >
+            Sign In
+          </button>
+
+          <p class="text-muted mt-3">
+            <span class="violet-text" data-lang="login_no_account">
+              Don't have an account?
+            </span>
+            <a href="#" data-lang="login_create">Create one</a>
+          </p>
+        </form>
+      </div>
+    </main>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/login-lang.js"></script>
+    <script src="../js/login.js"></script>
+  </body>
+</html>

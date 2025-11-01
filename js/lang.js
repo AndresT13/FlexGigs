@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const selector = document.getElementById("lang-selector");
 
   if (!selector) {
-    console.error("❌ No se encontró el selector de idioma (#lang-selector)");
+    console.error("No se encontró el selector de idioma (#lang-selector)");
     return;
   }
 
@@ -45,7 +45,5 @@ function loadLanguage(lang) {
 
       console.log(`✅ Idioma cargado correctamente: ${lang}`);
     })
-    .catch((err) =>
-      console.error(`❌ Error cargando idioma (${langPath}):`, err)
-    );
+    .catch((err) => console.error(`Error cargando idioma (${langPath}):`, err));
 }

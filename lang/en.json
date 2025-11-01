@@ -3,12 +3,14 @@
   "nav_about": "About",
   "nav_contact": "Contact",
   "nav_pqrs": "PQRS",
+
   "hero_title": "Welcome to Your Professional Services",
   "hero_sub": "Explore, connect, and collaborate — all in one place.",
   "hero_slide2_title": "Discover Top Talent",
   "hero_slide2_sub": "Find skilled professionals for every project.",
   "hero_slide3_title": "Grow Your Business",
   "hero_slide3_sub": "Leverage our platform to expand your reach.",
+
   "services_title": "Our Services",
   "srv_programming": "Programming",
   "srv_programming_desc": "Professional programming services to bring your ideas to life.",

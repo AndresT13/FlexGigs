@@ -1,0 +1,11 @@
+{
+  "login_title": "Entrar",
+  "login_sub": "Acesse sua conta para gerenciar seus serviços",
+  "login_email": "Digite seu e-mail",
+  "login_password": "Digite sua senha",
+  "login_button": "Entrar",
+  "login_no_account": "Não tem uma conta?",
+  "login_create": "Crie uma",
+  "login_email_error": "Por favor, insira um e-mail válido.",
+  "login_password_error": "A senha é obrigatória."
+}

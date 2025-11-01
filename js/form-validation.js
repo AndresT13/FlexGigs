@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //  Verificación de existencia del formulario
   if (!form) {
-    console.warn("⚠️ No se encontró el formulario PQRS (#pqrsForm).");
+    console.warn("No se encontró el formulario PQRS (#pqrsForm).");
     return;
   }
 

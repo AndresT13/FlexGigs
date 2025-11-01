@@ -33,6 +33,7 @@ Este sitio combina **Bootstrap 5**, **HTML5**, **CSS3** y **JavaScript puro**, i
 | **Bootstrap 5.3**        | Framework CSS para diseño adaptable y componentes dinámicos. |
 | **JavaScript (Vanilla)** | Validaciones, animaciones y lógica del carrusel.             |
 | **GitHub Pages**         | Hosting gratuito para el despliegue web.                     |
+| **json**                 | Formato utilizado en el proyecto para multiidioma.           |
 
 ---
 

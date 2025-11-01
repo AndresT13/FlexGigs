@@ -35,11 +35,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const el = document.getElementById("heroCarousel");
   if (el && window.bootstrap) {
     new bootstrap.Carousel(el, {
-      interval: 4000, // 4s entre slides
+      interval: 4000,
       ride: "carousel",
-      pause: false, // No se pausa al hacer hover
-      wrap: true, // Vuelve al inicio
-      touch: true, // Soporte táctil
+      pause: false,
+      wrap: true,
+      touch: true,
     });
     console.log(" Carrusel iniciado correctamente.");
   } else {

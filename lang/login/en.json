@@ -1,0 +1,11 @@
+{
+  "login_title": "Sign In",
+  "login_sub": "Access your account to manage your services",
+  "login_email": "Enter your email",
+  "login_password": "Enter your password",
+  "login_button": "Sign In",
+  "login_no_account": "Don't have an account?",
+  "login_create": "Create one",
+  "login_email_error": "Please enter a valid email.",
+  "login_password_error": "Password is required."
+}
